@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentReg2">
+
+    <ImageView
+        android:id="@+id/stuReg2Back"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <TextView
+        android:id="@+id/stuReg2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stuReg2Back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:drawableTop="@drawable/icon_profile"
+        android:text="Complete SignUp \n Step 2/2"
+        android:textAlignment="center"
+        android:textColor="@color/lightblue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stuReg2Acknowledge"
+        android:layout_below="@id/stuReg2Title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="#EBF4F5"
+        app:cardCornerRadius="10dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/inputScrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter first Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/mname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Middle Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/regNo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Adm. No"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <Spinner
+                    android:id="@+id/spinner_school"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:dropDownWidth="match_parent"
+                    android:duplicateParentState="false"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_course"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:dropDownWidth="match_parent"
+                    android:duplicateParentState="false"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/spinner_YearOfStudy"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:dropDownWidth="match_parent"
+                    android:duplicateParentState="false"
+                    android:spinnerMode="dropdown" />
+
+                <EditText
+                    android:id="@+id/course_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Input Course"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Phone No."
+                    android:inputType="phone"
+                    android:textColor="@color/lightblue" />
+
+
+                <EditText
+                    android:id="@+id/mname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Middle Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/phone2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Phone No."
+                    android:inputType="phone"
+                    android:textColor="@color/lightblue" />
+
+                <EditText
+                    android:id="@+id/lname3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/lname4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Last Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/regNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Adm. No"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/lightblue"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/yearOfAdmission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter first Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#88B2B8" />
+
+                <EditText
+                    android:id="@+id/lname2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:layout_marginBottom="5pt"
+                    android:ems="10"
+                    android:hint="Enter Last Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#88B2B8" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/stuReg2SubmitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottom_curve_btn"
+        android:text="Complete"
+        android:textAllCaps="false"
+        android:textColor="@color/lightblue" />
+
+    <CheckBox
+        android:id="@+id/stuReg2Acknowledge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/stuReg2SubmitBtn"
+        android:layout_marginStart="20dp"
+        android:text="Acknowledge Providing correct Info"
+        android:textColor="@color/lightblue" />
+
+</RelativeLayout>

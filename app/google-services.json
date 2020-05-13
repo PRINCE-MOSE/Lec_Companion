@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "446295217925",
+    "firebase_url": "https://leccompanionkotlin.firebaseio.com",
+    "project_id": "leccompanionkotlin",
+    "storage_bucket": "leccompanionkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446295217925:android:5a3c6dfd636aa3792f896c",
+        "android_client_info": {
+          "package_name": "com.example.lec_companion_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446295217925-qji2k7g4eskvgdkfpm9r0jb36l4b4ssc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lec_companion_kotlin",
+            "certificate_hash": "ded1af44d603f06033099236005780f55b3c9bb1"
+          }
+        },
+        {
+          "client_id": "446295217925-kchd1cc0gigtvaj9vdlejmqod2n8lr61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVcu0glIe77yRxq8HjKjG80Xqgji4B-JY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446295217925-kchd1cc0gigtvaj9vdlejmqod2n8lr61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

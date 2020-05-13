@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lecturer_Login">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <TextView
+        android:id="@+id/lecLoginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:drawableTop="@drawable/icon_profile"
+        android:text="Lecturer Login"
+        android:textColor="@color/lightblue"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/lecLoginEmail"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lecLoginTitle"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/user"
+        android:hint="Enter Your UserName"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/lightblue" />
+
+    <EditText
+        android:id="@+id/lecLogin_pass"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lecLoginEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/password"
+        android:hint="Enter Your Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/lightblue" />
+
+    <TextView
+        android:id="@+id/forgot_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lecLogin_pass"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:text="Forgot my password."
+        android:textColor="#F83643" />
+
+    <CheckBox
+        android:id="@+id/stay_LoggedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lecLogin_pass"
+        android:layout_marginStart="20dp"
+        android:text="Stay Logged in..."
+        android:textColor="@color/lightblue" />
+
+    <Button
+        android:id="@+id/lecLogin_btn"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/forgot_pass"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/round_blue_btn"
+        android:elevation="20dp"
+        android:enabled="false"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lecLoginRegBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        android:clickable="true"
+        android:text="Don't  have an account with Lecture Companion?"
+        android:textColor="@color/lightblue" />
+
+    <Button
+        android:id="@+id/lecLoginRegBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bottom_curve_btn"
+        android:text="SignUp"
+        android:textAllCaps="false"
+        android:textColor="@color/lightblue" />
+
+
+</RelativeLayout>

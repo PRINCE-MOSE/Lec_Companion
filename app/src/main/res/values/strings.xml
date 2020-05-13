@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Lec_Companion_Kotlin</string>
+    <string name="myAppTitle">Lecture Companion_RU</string>
+    <string name="footer_designer">Designed By Moses Sikuku</string>
+    <string name="terms">This is to acknowledge that this is my  Original work and owned to; \n \n Name: Moses Sikuku Wekesa \n \n Adm. No. CSC/026/2016 \n \n This is a project Submitted to; \n Rongo University \n School Of Science Technology And  Engineering \n Department : Mathematics, Statistics  and Computing For the partial award of the Barchelors  Degreee in Computer Science \n 2020</string>
+
+    <string-array name="schools">
+
+        <item>School of SSTE</item>
+        <item>School of INFOCOMS</item>
+        <item>School of SANRES</item>
+        <item>School of Education</item>
+        <item>School of Bussiness</item>
+        <item>School of SASS</item>
+
+    </string-array>
+
+    <string-array name="sste_courses">
+
+        <item>Bsc.Computer Science</item>
+        <item>Bsc.Mathematics</item>
+        <item>Bsc.Statistics</item>
+        <item>Bsc.FDT</item>
+        <item>Bsc.Chemistry</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="Infocoms_courses">
+
+        <item>Bsc.Information Science</item>
+        <item>Bsc.Informatics</item>
+        <item>Bsc.Journalism</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="Education_courses">
+
+        <item>BEd.Engliish Lit</item>
+        <item>BEd.Mathematics</item>
+        <item>BEd.Special Needs</item>
+        <item>Other</item>
+
+
+
+    </string-array>
+
+    <string-array name="Business_courses">
+
+        <item>Barchelor in Commerce</item>
+        <item>Bsc.Human Resource</item>
+        <item>Bsc.Supply Chain Mgt</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="sanres_courses">
+
+        <item>Bsc.Agriculture</item>
+        <item>Bsc.Horticulture</item>
+        <item>Bsc.AGED</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="sas_courses">
+
+        <item>B.Arts.Sociology</item>
+        <item>B.Arts.Kiswahili</item>
+        <item>B.Arts.Geography</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="yearOfStudy">
+
+        <item>Select Year Of Study</item>
+        <item>Year I</item>
+        <item>Year II</item>
+        <item>Year III</item>
+        <item>Year IV</item>
+
+    </string-array>
+
+</resources>
