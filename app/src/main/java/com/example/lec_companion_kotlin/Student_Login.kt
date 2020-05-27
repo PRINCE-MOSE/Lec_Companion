@@ -1,17 +1,17 @@
 package com.example.lec_companion_kotlin
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_lecturer__login.*
 import maes.tech.intentanim.CustomIntent
 
 class Student_Login : AppCompatActivity() {
@@ -20,6 +20,7 @@ class Student_Login : AppCompatActivity() {
     private var user_pass: TextView?=null
     private var login_btn:Button?=null
     private var firebaseAuth: FirebaseAuth?=null
+    private var stayLoggedIn:CheckBox?=null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,15 +59,31 @@ class Student_Login : AppCompatActivity() {
         user_pass=findViewById(R.id.stuLoginPass)
         firebaseAuth= FirebaseAuth.getInstance()
         login_btn=findViewById(R.id.stuLoginBtn)
+        stayLoggedIn=findViewById(R.id.Stay_LoggedIn)
 
         login_btn?.setOnClickListener {
 
             loginStudent()
         }
 
+        stayLoggedIn?.setOnCheckedChangeListener { buttonView, isChecked ->
 
+            if (isChecked){
+
+              Toast.makeText(applicationContext,"Checked",Toast.LENGTH_SHORT).show()
+
+            }else{
+
+                Toast.makeText(applicationContext,"UnChecked",Toast.LENGTH_SHORT).show()
+
+            }
+
+
+
+        }
 
     }
+
 
     private fun loginStudent(){
 
@@ -96,18 +113,20 @@ class Student_Login : AppCompatActivity() {
             firebaseAuth?.signInWithEmailAndPassword(emailText,passwd)?.addOnCompleteListener(object :OnCompleteListener<AuthResult>{
                 override fun onComplete(task: Task<AuthResult>) {
 
-               if (task.isSuccessful){
+                    if (task.isSuccessful){
 
-                   Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_SHORT).show()
 
-               }
+                        Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
+                        startActivity(Intent(applicationContext,Stu_Home::class.java))
+
+                    }
                     else{
 
-                   var error=task.exception?.message
+                        var error=task.exception?.message
 
-                   Toast.makeText(applicationContext,"Error: "+error,Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext,"Error: "+error,Toast.LENGTH_SHORT).show()
 
-               }
+                    }
 
 
                 }
@@ -118,6 +137,5 @@ class Student_Login : AppCompatActivity() {
 
 
     }
-
 
 }

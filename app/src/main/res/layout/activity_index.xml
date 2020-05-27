@@ -76,7 +76,7 @@
         app:outer_color="@color/lightblue"
         app:rotate_icon="false"
         app:text="A Student"
-        app:text_size="25sp"
+        app:text_size="18sp"
         app:text_style="bold" />
 
     <com.ncorti.slidetoact.SlideToActView
@@ -91,7 +91,7 @@
         app:border_radius="20dp"
         app:outer_color="@color/lightblue"
         app:text="A Lecturer"
-        app:text_size="25sp"
+        app:text_size="18sp"
         app:text_style="bold" />
 
     <ImageView
@@ -113,6 +113,7 @@
         android:layout_height="52dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:clickable="true"
         android:text="Copyright \n @Designed By Moses Sikuku"
         android:textAlignment="center"
         android:textColor="@color/white"

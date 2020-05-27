@@ -66,7 +66,7 @@
                     android:layout_marginEnd="20pt"
                     android:layout_marginBottom="5pt"
                     android:ems="10"
-                    android:hint="Enter first Name"
+                    android:hint="@string/stu_enter_Fname"
                     android:inputType="textPersonName"
                     android:textColor="@color/lightblue"
                     android:textColorHint="#88B2B8" />
@@ -100,7 +100,7 @@
                     android:textColorHint="#88B2B8" />
 
                 <EditText
-                    android:id="@+id/regNo2"
+                    android:id="@+id/regNo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20pt"
@@ -139,19 +139,6 @@
                     android:duplicateParentState="false"
                     android:spinnerMode="dropdown" />
 
-                <Spinner
-                    android:id="@+id/spinner_YearOfStudy"
-                    style="@android:style/Widget.Spinner"
-                    android:layout_width="match_parent"
-
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:dropDownWidth="match_parent"
-                    android:duplicateParentState="false"
-                    android:spinnerMode="dropdown" />
-
                 <EditText
                     android:id="@+id/course_more"
                     android:layout_width="match_parent"
@@ -167,6 +154,19 @@
                     android:textColorHint="#88B2B8"
                     android:visibility="gone" />
 
+                <Spinner
+                    android:id="@+id/spinner_YearOfStudy"
+                    style="@android:style/Widget.Spinner"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20pt"
+                    android:layout_marginTop="5pt"
+                    android:layout_marginEnd="20pt"
+                    android:dropDownWidth="match_parent"
+                    android:duplicateParentState="false"
+                    android:spinnerMode="dropdown" />
+
                 <EditText
                     android:id="@+id/phone"
                     android:layout_width="match_parent"
@@ -180,101 +180,40 @@
                     android:inputType="phone"
                     android:textColor="@color/lightblue" />
 
+                <LinearLayout
+                    android:id="@+id/imageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-                <EditText
-                    android:id="@+id/mname2"
+
+                    <ImageView
+                        android:id="@+id/profile_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/ic_menu_camera" />
+
+                    <Button
+                        android:id="@+id/browse_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_blue_btn"
+                        android:text="Browse Profile..."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/checkSchoolbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Middle Name"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/lightblue"
-                    android:textColorHint="#88B2B8" />
+                    android:text="Check School" />
 
-                <EditText
-                    android:id="@+id/phone2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Phone No."
-                    android:inputType="phone"
-                    android:textColor="@color/lightblue" />
-
-                <EditText
-                    android:id="@+id/lname3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Last Name"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/lightblue"
-                    android:textColorHint="#88B2B8" />
-
-                <EditText
-                    android:id="@+id/lname4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Last Name"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/lightblue"
-                    android:textColorHint="#88B2B8" />
-
-                <EditText
-                    android:id="@+id/regNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Adm. No"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/lightblue"
-                    android:textColorHint="#88B2B8" />
-
-                <EditText
-                    android:id="@+id/yearOfAdmission"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter first Name"
-                    android:inputType="textPersonName"
-                    android:textColorHint="#88B2B8" />
-
-                <EditText
-                    android:id="@+id/lname2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Enter Last Name"
-                    android:inputType="textPersonName"
-                    android:textColorHint="#88B2B8" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

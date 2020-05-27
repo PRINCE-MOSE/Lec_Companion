@@ -20,11 +20,12 @@ class MainActivity : AppCompatActivity() {
 
         var skip_btn= findViewById<Button>(R.id.skip_btn)
         var start_btn=findViewById<Button>(R.id.start_btn)
+        start_btn.visibility= View.VISIBLE
 
 
         skip_btn.setOnClickListener(){
 
-            var intent= Intent(this@MainActivity,StudentReg2::class.java)
+            var intent= Intent(this@MainActivity,Lec_Profile::class.java)
 
             startActivity(intent)
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
             ChangeText3()
 
-            var intent= Intent(this@MainActivity,landingPage::class.java)
+            var intent= Intent(this@MainActivity,index::class.java)
 
             startActivity(intent)
 
@@ -75,7 +76,6 @@ fun ChangeText1(){
     next_btn.visibility= View.GONE
     finish_btn.visibility=View.VISIBLE
 
-
 }
     fun ChangeText3(){
 
@@ -86,9 +86,13 @@ fun ChangeText1(){
 
     finish_btn.visibility= View.GONE
 
-
-
 }
+
+    override fun onResume() {
+        super.onResume()
+
+        start_btn.visibility=View.VISIBLE
+    }
 
     }
 

@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/graduation" />
 
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

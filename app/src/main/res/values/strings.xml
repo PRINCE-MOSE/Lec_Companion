@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lec_Companion_Kotlin</string>
+    <string name="app_name">Lec_Companion_Ru</string>
     <string name="myAppTitle">Lecture Companion_RU</string>
     <string name="footer_designer">Designed By Moses Sikuku</string>
     <string name="terms">This is to acknowledge that this is my  Original work and owned to; \n \n Name: Moses Sikuku Wekesa \n \n Adm. No. CSC/026/2016 \n \n This is a project Submitted to; \n Rongo University \n School Of Science Technology And  Engineering \n Department : Mathematics, Statistics  and Computing For the partial award of the Barchelors  Degreee in Computer Science \n 2020</string>
@@ -43,7 +43,6 @@
         <item>Other</item>
 
 
-
     </string-array>
 
     <string-array name="Business_courses">
@@ -82,5 +81,59 @@
         <item>Year IV</item>
 
     </string-array>
+
+    <string name="title_activity_stu_home_drawer">StuHomeDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">My UserName</string>
+    <string name="nav_header_subtitle">myemail@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_class">Class</string>
+    <string name="menu_news">News</string>
+    <string name="menu_downloads">Downloads</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="stu_enter_Fname">Enter first Name</string>
+    <string name="title_activity_stu__home">Stu_Home</string>
+    <string name="menu_addLecture">Add Lecture</string>
+    <string name="menu_viewLectures">View My Lectures</string>
+    <string name="menu_lectureReport">My Summary</string>
+    <string name="menu_classTimetable">Class TimeTable</string>
+    <string name="menu_examTimetable">Exam Time Table</string>
+    <string name="menu_notes">Notes</string>
+    <string name="nav_logout">Logout</string>
+    <string name="my_profile">My Profile</string>
+    <string name="emial">Email :</string>
+    <string name="title_phone">Phone No. :</string>
+    <string name="title_school">School :</string>
+    <string name="title_course">Course :</string>
+    <string name="adm_title">Adm No. :</string>
+    <string name="studyYear_title">Study Year :</string>
+    <string name="edit_btn">Edit..</string>
+    <string name="title_activity_lec__profile">Lec_Profile</string>
+    <string name="menu_uploads"><![CDATA[Uploads & Tutorials]]></string>
+    <string name="menu_assignments">Assignments</string>
+    <string name="menu_uniplus">Visit UniPlus</string>
+    <string name="uniplus_text">Remember to Register for your Units As Early as Possible...</string>
+    <string name="welcome">Welcome:</string>
+    <string name="date_Sample">Tuesday, 23 May 2020</string>
+    <string name="news_title">Lates Trending News And Updates</string>
+    <string name="news_placeHolder">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti l
+        aboris nisi ut aliquip ex ea commodo consequatorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti l
+        aboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="news_authour">Moses Prince</string>
 
 </resources>
