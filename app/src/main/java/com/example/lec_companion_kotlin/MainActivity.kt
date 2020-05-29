@@ -7,16 +7,28 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import maes.tech.intentanim.CustomIntent.customType
+import com.google.firebase.analytics.FirebaseAnalytics
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 
 class MainActivity : AppCompatActivity() {
+
+    private var mFirebaseAnalytics: FirebaseAnalytics? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         customType(this@MainActivity,"fadein-to-fadeout")
+
+
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
         var skip_btn= findViewById<Button>(R.id.skip_btn)
         var start_btn=findViewById<Button>(R.id.start_btn)

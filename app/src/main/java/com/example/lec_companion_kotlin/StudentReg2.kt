@@ -10,10 +10,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.*
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_index.view.*
 import kotlinx.android.synthetic.main.activity_student_reg2.*
 
 class StudentReg2 : AppCompatActivity() {
+
+    private var firebaseAuth:FirebaseAuth?=null
+ /*   private var dataBase=FirebaseDatabase.getInstance()
+    private var myRef= dataBase.reference*/
+    var firebaseDatabase: DatabaseReference?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,13 +36,14 @@ class StudentReg2 : AppCompatActivity() {
             startActivity(Intent(applicationContext, Student_Login::class.java))
         }
 
-
+        firebaseAuth= FirebaseAuth.getInstance()
+        firebaseDatabase = FirebaseDatabase.getInstance().reference.child("UserDetails").child(firebaseAuth?.currentUser!!.uid)
 
 
         stuReg2SubmitBtn.setOnClickListener {
 
-
-            InsertData()
+            submitDataToFirebase()
+          //  InsertData()
 
         }
 
@@ -95,6 +106,82 @@ class StudentReg2 : AppCompatActivity() {
         Toast.makeText(this@StudentReg2, "Completed Successfully...", Toast.LENGTH_SHORT).show()
 
         startActivity(Intent(this@StudentReg2, Stu_Home::class.java))
+
+    }
+
+    private fun submitDataToFirebase(){
+
+    var currentUser=firebaseAuth!!.currentUser
+
+    var currentUserEmail=currentUser!!.email.toString()
+
+  //myRef?.child(currentUser!!.uid).child("UserDetails")?.child(firebaseAuth!!.currentUser!!.uid)
+  //myRef?.child("UserDetails")?.child(firebaseAuth!!.currentUser!!.uid)
+
+        var fnameStrng = fname.text.toString().trim()
+        var mnameStrng = mname.text.toString().trim()
+        var lnameStrng = lname.text.toString().trim()
+        var regNoStrng: String = regNo.text.toString().trim()
+        var schoolStrng = spinner_school.selectedItem.toString().trim()
+        var courseStrng = spinner_course.selectedItem.toString().trim()
+        var yearstrng = spinner_YearOfStudy.selectedItem.toString().trim()
+        var phoneStrng = phone.text.toString().trim()
+
+
+        var studentInfo = HashMap<String,Any>()
+
+        studentInfo.put("First Name",fnameStrng)
+        studentInfo.put("Middle Name",mnameStrng)
+        studentInfo.put("Last Name",lnameStrng)
+        studentInfo.put("Email",currentUserEmail)
+        studentInfo.put("Reg Number",regNoStrng)
+        studentInfo.put("School",schoolStrng)
+        studentInfo.put("Course",courseStrng)
+        studentInfo.put("Year Of Study",yearstrng)
+        studentInfo.put("Phone Number",phoneStrng)
+
+
+        firebaseDatabase?.updateChildren(studentInfo)?.addOnCompleteListener(object : OnCompleteListener<Void>{
+            override fun onComplete(task: Task<Void>) {
+
+                if (task.isSuccessful){
+
+                    Toast.makeText(applicationContext,"Your Details Saved Successfully...", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@StudentReg2, Stu_Home::class.java))
+                }
+                else{
+
+
+                    val error = task?.exception
+                    Toast.makeText(applicationContext,"Erorr Occured: $error", Toast.LENGTH_SHORT).show()
+
+                }
+            }
+
+
+        })
+
+       /* studentInfo.put("Email",currentUserEmail)
+        studentInfo.put("Reg No.",regNoStrng)
+        studentInfo.put("School",schoolStrng)
+        studentInfo.put("Course",courseStrng)
+        studentInfo.put("Year Of Study",yearstrng)
+        studentInfo.put("Phone Number",phoneStrng)*/
+
+        //myRef.updateChildren(studentInfo)?.addOnCompleteListener(object :onCompleteListener)
+
+      /*  myRef?.updateChildren(studentInfo)?.addOnCompleteListener { task ->
+            if (task.isSuccessful){
+
+                Toast.makeText(applicationContext,"Your Details Saved Successfully", Toast.LENGTH_SHORT).show()
+            } else{
+
+
+                val error = task?.exception
+                Toast.makeText(applicationContext,"Erorr Occured: $error", Toast.LENGTH_SHORT).show()
+
+            }
+        }*/
 
     }
 
@@ -380,11 +467,11 @@ class StudentReg2 : AppCompatActivity() {
     }
 
     //handle result of picked image
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+   /* override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE) {
             profile_pic.setImageURI(data?.data)
         }
 
-    }
+    }*/
 
 }

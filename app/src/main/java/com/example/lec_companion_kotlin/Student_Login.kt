@@ -11,6 +11,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_lecturer__login.*
 import maes.tech.intentanim.CustomIntent
 
@@ -22,6 +23,10 @@ class Student_Login : AppCompatActivity() {
     private var firebaseAuth: FirebaseAuth?=null
     private var stayLoggedIn:CheckBox?=null
 
+
+    private var dataBase= FirebaseDatabase.getInstance()
+
+    private var myref=dataBase.reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,6 +120,10 @@ class Student_Login : AppCompatActivity() {
 
                     if (task.isSuccessful){
 
+                        //Post the data to the firebase User table
+                        var currentUser=firebaseAuth?.currentUser
+
+                        myref.child("Users").child(currentUser!!.uid).setValue(currentUser!!.email)
 
                         Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
                         startActivity(Intent(applicationContext,Stu_Home::class.java))

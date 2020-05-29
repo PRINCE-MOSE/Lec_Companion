@@ -130,10 +130,9 @@
     <string name="news_placeHolder">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
         sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti l
-        aboris nisi ut aliquip ex ea commodo consequatorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut ero labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco poriti l
+        aboris nisi ut aliquip mco poriti l
         aboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="news_authour">Moses Prince</string>
+    <string name="sample_user">Dr. Moses Sikuku</string>
 
 </resources>
