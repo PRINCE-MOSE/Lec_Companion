@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.*
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
@@ -13,6 +14,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_lecturer__login.*
+import kotlinx.android.synthetic.main.activity_student__login.*
 import maes.tech.intentanim.CustomIntent
 
 class Student_Login : AppCompatActivity() {
@@ -64,7 +66,7 @@ class Student_Login : AppCompatActivity() {
         user_pass=findViewById(R.id.stuLoginPass)
         firebaseAuth= FirebaseAuth.getInstance()
         login_btn=findViewById(R.id.stuLoginBtn)
-        stayLoggedIn=findViewById(R.id.Stay_LoggedIn)
+        stayLoggedIn= this.findViewById(R.id.Stay_LoggedIn)
 
         login_btn?.setOnClickListener {
 
@@ -125,9 +127,11 @@ class Student_Login : AppCompatActivity() {
 
                         myref.child("Users").child(currentUser!!.uid).setValue(currentUser!!.email)
 
+
+                        loading.visibility=View.VISIBLE
                         Toast.makeText(applicationContext,"Successful Login",Toast.LENGTH_LONG).show()
                         startActivity(Intent(applicationContext,Stu_Home::class.java))
-
+                        loading.visibility=View.INVISIBLE
                     }
                     else{
 

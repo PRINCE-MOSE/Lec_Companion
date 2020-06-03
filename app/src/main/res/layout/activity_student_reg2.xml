@@ -114,7 +114,7 @@
                     android:textColorHint="#88B2B8" />
 
                 <Spinner
-                    android:id="@+id/spinner_school"
+                    android:id="@+id/spinner_school_lec"
                     style="@android:style/Widget.Spinner"
                     android:layout_width="match_parent"
 
@@ -138,21 +138,6 @@
                     android:dropDownWidth="match_parent"
                     android:duplicateParentState="false"
                     android:spinnerMode="dropdown" />
-
-                <EditText
-                    android:id="@+id/course_more"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20pt"
-                    android:layout_marginTop="5pt"
-                    android:layout_marginEnd="20pt"
-                    android:layout_marginBottom="5pt"
-                    android:ems="10"
-                    android:hint="Input Course"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/lightblue"
-                    android:textColorHint="#88B2B8"
-                    android:visibility="gone" />
 
                 <Spinner
                     android:id="@+id/spinner_YearOfStudy"

@@ -10,7 +10,7 @@ android {
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.example.lec_companion_kotlin"
-        minSdkVersion 21
+        minSdkVersion 26
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -59,4 +59,5 @@ dependencies {
     implementation 'com.nineoldandroids:library:2.4.0'
     implementation 'com.daimajia.slider:library:1.1.5@aar'
     implementation "com.google.android.material:material:1.1.0-alpha02"
+    implementation 'com.ramijemli.percentagechartview:percentagechartview:0.3.1'
 }

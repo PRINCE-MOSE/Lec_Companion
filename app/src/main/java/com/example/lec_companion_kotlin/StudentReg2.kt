@@ -1,7 +1,6 @@
 package com.example.lec_companion_kotlin
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -15,7 +14,6 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import kotlinx.android.synthetic.main.activity_index.view.*
 import kotlinx.android.synthetic.main.activity_student_reg2.*
 
 class StudentReg2 : AppCompatActivity() {
@@ -85,7 +83,7 @@ class StudentReg2 : AppCompatActivity() {
         val mnameStrng = mname.text.toString().trim()
         val lnameStrng = lname.text.toString().trim()
         val regNoStrng = regNo.text.toString().trim()
-        val schoolStrng = spinner_school.selectedItem.toString().trim()
+        val schoolStrng = spinner_school_lec.selectedItem.toString().trim()
         val courseStrng = spinner_course.selectedItem.toString().trim()
         val yearstrng = spinner_YearOfStudy.selectedItem.toString().trim()
         val phoneStrng = phone.text.toString().trim()
@@ -122,7 +120,7 @@ class StudentReg2 : AppCompatActivity() {
         var mnameStrng = mname.text.toString().trim()
         var lnameStrng = lname.text.toString().trim()
         var regNoStrng: String = regNo.text.toString().trim()
-        var schoolStrng = spinner_school.selectedItem.toString().trim()
+        var schoolStrng = spinner_school_lec.selectedItem.toString().trim()
         var courseStrng = spinner_course.selectedItem.toString().trim()
         var yearstrng = spinner_YearOfStudy.selectedItem.toString().trim()
         var phoneStrng = phone.text.toString().trim()
@@ -229,9 +227,9 @@ class StudentReg2 : AppCompatActivity() {
         )
 
 
-        spinner_school.adapter = schArrayAdpt
+        spinner_school_lec.adapter = schArrayAdpt
 
-        spinner_school.onItemSelectedListener = object : OnItemSelectedListener {
+        spinner_school_lec.onItemSelectedListener = object : OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
                 Toast.makeText(this@StudentReg2, "Select School", Toast.LENGTH_LONG).show()
             }
@@ -244,7 +242,7 @@ class StudentReg2 : AppCompatActivity() {
             ) {
 
 
-                var selectedSchool = spinner_school.selectedItem as String
+                var selectedSchool = spinner_school_lec.selectedItem as String
 
                 checkSchoolbtn.setOnClickListener {
 
@@ -273,15 +271,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 5) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
 
@@ -301,15 +291,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 3) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
                 } else if (position == 2) {
@@ -328,15 +310,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 3) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
 
@@ -357,15 +331,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 3) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
                 } else if (position == 4) {
@@ -384,15 +350,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 3) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
                 } else if (position == 5) {
@@ -410,15 +368,7 @@ class StudentReg2 : AppCompatActivity() {
                             position: Int,
                             id: Long
                         ) {
-                            if (position == 3) {
 
-                                course_more.visibility = View.VISIBLE
-
-                            } else {
-
-                                course_more.visibility = View.GONE
-
-                            }
                         }
                     }
                 }

@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         skip_btn.setOnClickListener(){
 
-            var intent= Intent(this@MainActivity,Lec_Profile::class.java)
+            var intent= Intent(this@MainActivity,Stu_Home::class.java)
 
             startActivity(intent)
 
